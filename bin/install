@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# This asdf shell script installs micro
+
+# consider using the trap command
+# see: https://www.shellscript.sh/trap.html
+
+echo ASDF_DOWNLOAD_PATH: $ASDF_DOWNLOAD_PATH
+echo  ASDF_INSTALL_PATH: $ASDF_INSTALL_PATH
+
+cp -R $ASDF_DOWNLOAD_PATH/* $ASDF_INSTALL_PATH
+
+cd $ASDF_INSTALL_PATH
+
+tar xvf $ASDF_DOWNLOAD_PATH/micro.tar.gz --strip-components=1
+
+mkdir bin
+mv micro bin
+
+echo "------------------------------------------------------------------"
+echo "asdf-vscodium:"
+echo ""
+echo "The asdf system now manages the micro commands."
+echo ""
+echo "The micro should now simply work..."
+echo ""

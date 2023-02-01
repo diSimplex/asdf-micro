@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# This asdf shell script provides a brief overview of Micro editor
+
+echo "a modern and intuitive terminal-based text editor"
+echo ""
